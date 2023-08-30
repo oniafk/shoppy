@@ -1,0 +1,3 @@
+function OrderCard() {}
+
+export { OrderCard };

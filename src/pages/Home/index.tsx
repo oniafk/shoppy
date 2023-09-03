@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { LayOut } from "../../components/Layout";
 import { Card } from "../../components/Card/Card";
+import { ProductDetail } from "../../components/ProductDetail";
 
 import Product from "../../interfaces/APIResponse";
 
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
           />
         ))}
       </div>
+      <ProductDetail />
     </LayOut>
   );
 };

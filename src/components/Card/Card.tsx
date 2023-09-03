@@ -6,8 +6,16 @@ import { CardProps } from "../../interfaces/Card";
 function Card(Props: CardProps) {
   const context = useContext(ShoppingCartContext);
 
+  const showProduct = (productDetail: CardProps) => {
+    context.openProductDetail();
+    context.setShowProductOnDescriptionPanel(productDetail);
+  };
+
   return (
-    <div className="bg-white cursor-pointer w-56 h-60 mb-2">
+    <div
+      className="bg-white cursor-pointer w-56 h-60 mb-2"
+      onClick={() => showProduct(Props)}
+    >
       <figure className="relative mb-2 w-full h-4/5">
         <span className="absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-sm m-2 px-3 py-0.5">
           {Props.category}

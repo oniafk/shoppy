@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { ShoppingCartContext } from "../../Context";
+
 import { CardProps } from "../../interfaces/Card";
 
 function Card(Props: CardProps) {
+  const context = useContext(ShoppingCartContext);
+
   return (
     <div className="bg-white cursor-pointer w-56 h-60 mb-2">
       <figure className="relative mb-2 w-full h-4/5">
@@ -12,7 +17,12 @@ function Card(Props: CardProps) {
           src={Props.image}
           alt={Props.description}
         />
-        <div className="absolute top-0 right-0 flex justify-center items-center bg-black w-6 h-6 rounded-full m-2 p-1 text-white">
+        <div
+          onClick={() => {
+            context.setCount(context.count + 1);
+          }}
+          className="absolute top-0 right-0 flex justify-center items-center bg-black w-6 h-6 rounded-full m-2 p-1 text-white"
+        >
           +
         </div>
       </figure>

@@ -1,7 +1,7 @@
 import Product from "../APIResponse";
 
 interface CardProps extends Product {
-  id: number;
+  key: number;
 }
 
 export type { CardProps };

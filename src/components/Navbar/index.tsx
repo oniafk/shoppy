@@ -5,7 +5,7 @@ function NavBar() {
   const activeStyle = "underline undeline-offset-4";
 
   return (
-    <nav className="w-full flex justify-between items-center fixed z-10 py-5 px-8 text-sm font-light top-0">
+    <nav className="w-full flex justify-between items-center fixed z-10 py-5 px-8 text-sm font-light top-0 bg-white">
       <ul className="flex items-center gap-3">
         <li className="font-semibold text-lg">
           <NavLink to="./"> Shoppi </NavLink>
@@ -69,7 +69,7 @@ function NavBar() {
 
         <li>
           <NavLink
-            to="sing-in"
+            to="sign-in"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Sign In

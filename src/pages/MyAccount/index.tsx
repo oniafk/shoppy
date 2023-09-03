@@ -1,8 +1,10 @@
+import { LayOut } from "../../components/Layout";
+
 function MyAccount() {
   return (
-    <div>
+    <LayOut>
       <h1>MyAccount</h1>
-    </div>
+    </LayOut>
   );
 }
 

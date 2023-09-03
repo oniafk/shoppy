@@ -1,8 +1,10 @@
+import { LayOut } from "../../components/Layout";
+
 function MyOrder() {
   return (
-    <div>
+    <LayOut>
       <h1>MyOrder</h1>
-    </div>
+    </LayOut>
   );
 }
 

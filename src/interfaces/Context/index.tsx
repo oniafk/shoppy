@@ -12,6 +12,14 @@ interface ContextProps {
   setShowProductOnDescriptionPanel: React.Dispatch<
     React.SetStateAction<CardProps>
   >;
+  shoppingCartProductsAdded: CardProps[];
+  setShoppingCartProductsAdded: React.Dispatch<
+    React.SetStateAction<CardProps[]>
+  >;
+  isCheckOutSideMenuOpen: boolean;
+  setIsCheckOutSideMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  openCheckOutSideMenu: () => boolean;
+  closeCheckOutSideMenu: () => boolean;
 }
 
 export type { ContextProps };

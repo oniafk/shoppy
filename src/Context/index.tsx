@@ -12,6 +12,11 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
   const [showProductOnDescriptionPanel, setShowProductOnDescriptionPanel] =
     useState({} as ContextProps["showProductOnDescriptionPanel"]);
 
+  const [isCheckOutSideMenuOpen, setIsCheckOutSideMenuOpen] = useState(false);
+
+  const [shoppingCartProductsAdded, setShoppingCartProductsAdded] = useState(
+    [] as ContextProps["shoppingCartProductsAdded"]
+  );
   const openProductDetail = (): boolean => {
     setIsProductDetailOpen(true);
     return true;
@@ -21,7 +26,15 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
     return false;
   };
 
-  console.log(isProductDetailOpen);
+  const openCheckOutSideMenu = () => {
+    setIsCheckOutSideMenuOpen(true);
+    return true;
+  };
+
+  const closeCheckOutSideMenu = () => {
+    setIsCheckOutSideMenuOpen(false);
+    return false;
+  };
 
   return (
     <ShoppingCartContext.Provider
@@ -35,6 +48,12 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
         isProductDetailOpen,
         showProductOnDescriptionPanel,
         setShowProductOnDescriptionPanel,
+        shoppingCartProductsAdded,
+        setShoppingCartProductsAdded,
+        isCheckOutSideMenuOpen,
+        setIsCheckOutSideMenuOpen,
+        openCheckOutSideMenu,
+        closeCheckOutSideMenu,
       }}
     >
       {children}

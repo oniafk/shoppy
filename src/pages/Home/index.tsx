@@ -15,8 +15,6 @@ const Home: React.FC = () => {
       .then((data) => setItems(data));
   }, []);
 
-  console.log(items);
-
   return (
     <LayOut>
       Home

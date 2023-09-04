@@ -10,10 +10,11 @@ import { Link } from "react-router-dom";
 function MyOrder() {
   const context = useContext(ShoppingCartContext);
 
-  console.log("context", context.orderCheckingout);
-  // const currentPath = window.location.pathname;
-  // let index:number  = Number(currentPath.substring(currentPath.lastIndexOf("/") + 1));
-  // if (index == "last") index = context.orderCheckingout?.length - 1;
+  const currentPath = window.location.pathname;
+  let index: number | string = currentPath.substring(
+    currentPath.lastIndexOf("/") + 1
+  );
+  if (index == "last") index = context.orderCheckingout?.length - 1;
 
   return (
     <LayOut>
@@ -25,9 +26,8 @@ function MyOrder() {
       </div>
       <div className="flex flex-col w-80">
         {context.orderCheckingout?.length ? (
-          context.orderCheckingout
-            .slice(-1)[0]
-            .products.map((product: CheckOutCardProps) => (
+          context.orderCheckingout[Number(index)].products.map(
+            (product: CheckOutCardProps) => (
               <OrderCard
                 key={product.id}
                 id={product.id}
@@ -35,7 +35,8 @@ function MyOrder() {
                 image={product.image}
                 price={product.price}
               />
-            ))
+            )
+          )
         ) : (
           <p className="text-lg mx-auto mt-10">
             you have not placed any order 😥

@@ -20,7 +20,6 @@ function Card(Props: CardProps) {
     ]);
 
     context.openCheckOutSideMenu();
-    console.log(context.shoppingCartProductsAdded);
   };
 
   const renderIcon = (id: number) => {

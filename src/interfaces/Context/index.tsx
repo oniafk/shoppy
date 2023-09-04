@@ -21,7 +21,7 @@ interface ContextProps {
   setIsCheckOutSideMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   openCheckOutSideMenu: () => boolean;
   closeCheckOutSideMenu: () => boolean;
-  orderCheckingout: CheckOutOrder[];
+  orderCheckingout: CheckOutOrder[] | [];
   setOrderCheckingout: React.Dispatch<React.SetStateAction<CheckOutOrder[]>>;
   checkOutOrder: CheckOutOrder;
 }

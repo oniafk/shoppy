@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { CheckOutOrder } from "../../interfaces/CheckOutOrder";
 
-function OrdersCards(props) {
+function OrdersCards(props: CheckOutOrder) {
   const { totalPrice, totalProducts } = props;
 
   return (

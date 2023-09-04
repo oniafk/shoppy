@@ -24,17 +24,23 @@ function MyOrder() {
         <h1>My Order</h1>
       </div>
       <div className="flex flex-col w-80">
-        {context.orderCheckingout
-          ?.slice(-1)[0]
-          .products.map((product: CheckOutCardProps) => (
-            <OrderCard
-              key={product.id}
-              id={product.id}
-              title={product.title}
-              image={product.image}
-              price={product.price}
-            />
-          ))}
+        {context.orderCheckingout?.length ? (
+          context.orderCheckingout
+            .slice(-1)[0]
+            .products.map((product: CheckOutCardProps) => (
+              <OrderCard
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                image={product.image}
+                price={product.price}
+              />
+            ))
+        ) : (
+          <p className="text-lg mx-auto mt-10">
+            you have not placed any order 😥
+          </p>
+        )}
       </div>
     </LayOut>
   );

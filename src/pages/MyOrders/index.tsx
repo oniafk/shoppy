@@ -13,16 +13,20 @@ function MyOrders() {
         <h1 className="font-medium text-xl mb-4">My Orders</h1>
       </div>
 
-      {context.orderCheckingout.map((order, index) => {
-        return (
+      {context.orderCheckingout.length > 0 ? (
+        context.orderCheckingout.map((order, index) => (
           <Link key={index} to={`/my-orders/${index}`}>
             <OrdersCards
               totalProducts={order.totalProducts}
-              totalPrice={order.totalPrice.toFixed(2)}
+              totalPrice={Number(order.totalPrice.toFixed(2))}
             />
           </Link>
-        );
-      })}
+        ))
+      ) : (
+        <p className=" text-xl text-center font-medium mt-4 ">
+          You don't have any order 😥
+        </p>
+      )}
     </LayOut>
   );
 }

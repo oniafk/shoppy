@@ -18,9 +18,9 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
     [] as ContextProps["shoppingCartProductsAdded"]
   );
 
-  const [orderCheckingout, setOrderCheckingout] = useState(
-    [] as ContextProps["orderCheckingout"]
-  );
+  const [orderCheckingout, setOrderCheckingout] = useState<
+    ContextProps["orderCheckingout"]
+  >([]);
 
   const openProductDetail = (): boolean => {
     setIsProductDetailOpen(true);

@@ -28,6 +28,8 @@ function CheckOutSideMenu(): JSX.Element {
 
     context.setOrderCheckingout([...context.orderCheckingout, orderToAdd]);
     context.setShoppingCartProductsAdded([]);
+    context.setCount(0);
+    context.closeCheckOutSideMenu();
   };
 
   return (

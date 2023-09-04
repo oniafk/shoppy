@@ -23,6 +23,29 @@ function Card(Props: CardProps) {
     console.log(context.shoppingCartProductsAdded);
   };
 
+  const renderIcon = (id: number) => {
+    const isProductAdded =
+      context.shoppingCartProductsAdded.filter((product) => product.id === id)
+        .length > 0;
+
+    if (isProductAdded) {
+      return (
+        <div className="absolute top-0 right-0 flex justify-center items-center bg-green-400 w-6 h-6 rounded-full m-2 p-1 text-white">
+          <CheckIcon className="h-6 w-6 text-black-500" />
+        </div>
+      );
+    } else {
+      return (
+        <div
+          onClick={() => addProductToShoppingCart(Props)}
+          className="absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1 text-white"
+        >
+          <PlusIcon className="h-6 w-6 text-black" />
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="bg-white cursor-pointer w-56 h-60 mb-2">
       <figure className="relative mb-2 w-full h-4/5">
@@ -35,12 +58,7 @@ function Card(Props: CardProps) {
           alt={Props.description}
           onClick={() => showProduct(Props)}
         />
-        <div
-          onClick={() => addProductToShoppingCart(Props)}
-          className="absolute top-0 right-0 flex justify-center items-center bg-black w-6 h-6 rounded-full m-2 p-1 text-white"
-        >
-          <PlusIcon className="h-6 w-6 text-black-500" />
-        </div>
+        {renderIcon(Props.id)}
       </figure>
       <p className="flex justify-between">
         <span className="text-sm font-light">{Props.title}</span>

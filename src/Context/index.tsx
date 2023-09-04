@@ -17,6 +17,13 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
   const [shoppingCartProductsAdded, setShoppingCartProductsAdded] = useState(
     [] as ContextProps["shoppingCartProductsAdded"]
   );
+
+  console.log("shoppingCartProductsAdded", shoppingCartProductsAdded);
+
+  const [orderCheckingout, setOrderCheckingout] = useState(
+    [] as ContextProps["orderCheckingout"]
+  );
+
   const openProductDetail = (): boolean => {
     setIsProductDetailOpen(true);
     return true;
@@ -54,6 +61,8 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
         setIsCheckOutSideMenuOpen,
         openCheckOutSideMenu,
         closeCheckOutSideMenu,
+        orderCheckingout,
+        setOrderCheckingout,
       }}
     >
       {children}

@@ -11,12 +11,12 @@ import "./style.css";
 function CheckOutSideMenu(): JSX.Element {
   const context = useContext(ShoppingCartContext);
 
-  // const handleDeleteProduct = (id) => {
-  //   const filteredProducts = context.shoppingCartProductsAdded.filter(
-  //     (product) => product.id !== id
-  //   );
-  //   context.setShoppingCartProductsAdded(filteredProducts);
-  // };
+  const handleDeleteProduct = (id: number) => {
+    const filteredProducts = context.shoppingCartProductsAdded.filter(
+      (product) => product.id !== id
+    );
+    context.setShoppingCartProductsAdded(filteredProducts);
+  };
 
   // const handleCheckout = () => {
   //   const orderToAdd = {
@@ -45,19 +45,20 @@ function CheckOutSideMenu(): JSX.Element {
           />
         </div>
       </div>
-      {/* <div className="overflow-y-scroll flex-1">
+      <div className="overflow-y-scroll flex-1">
         {context.shoppingCartProductsAdded.map((product) => {
           return (
             <OrderCard
               key={product.id}
+              id={product.id}
               title={product.title}
-              imageURL={product.image}
+              image={product.image}
               price={product.price}
               handleDeleteProduct={() => handleDeleteProduct(product.id)}
             />
           );
         })}
-      </div> */}
+      </div>
       <div className="p-6">
         <p className="flex justify-between items-center">
           <span className="font-light ">Total:</span>

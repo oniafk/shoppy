@@ -1,4 +1,5 @@
 import { CardProps } from "../Card";
+import { CheckOutOrder } from "../CheckOutOrder";
 
 interface ContextProps {
   products: CardProps[];
@@ -20,8 +21,9 @@ interface ContextProps {
   setIsCheckOutSideMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   openCheckOutSideMenu: () => boolean;
   closeCheckOutSideMenu: () => boolean;
-  orderCheckingout: CardProps[];
-  setOrderCheckingout: React.Dispatch<React.SetStateAction<CardProps[]>>;
+  orderCheckingout: CheckOutOrder[];
+  setOrderCheckingout: React.Dispatch<React.SetStateAction<CheckOutOrder[]>>;
+  checkOutOrder: CheckOutOrder;
 }
 
 export type { ContextProps };

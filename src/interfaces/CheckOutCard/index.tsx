@@ -3,7 +3,7 @@ interface CheckOutCardProps {
   title: string;
   image: string;
   price: string;
-  handleDeleteProduct: () => void;
+  handleDeleteProduct?: () => void;
 }
 
 export type { CheckOutCardProps };

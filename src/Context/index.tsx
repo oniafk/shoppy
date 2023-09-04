@@ -18,8 +18,6 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
     [] as ContextProps["shoppingCartProductsAdded"]
   );
 
-  console.log("shoppingCartProductsAdded", shoppingCartProductsAdded);
-
   const [orderCheckingout, setOrderCheckingout] = useState(
     [] as ContextProps["orderCheckingout"]
   );
@@ -63,6 +61,7 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
         closeCheckOutSideMenu,
         orderCheckingout,
         setOrderCheckingout,
+        checkOutOrder: {} as ContextProps["checkOutOrder"],
       }}
     >
       {children}

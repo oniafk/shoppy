@@ -3,7 +3,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import { CheckOutCardProps } from "../../interfaces/CheckOutCard";
 
 function OrderCard(props: CheckOutCardProps): JSX.Element {
-  const { title, image, price, id, handleDeleteProduct } = props;
+  const { title, image, price, handleDeleteProduct } = props;
 
   let renderXMarkIcon;
 
@@ -16,7 +16,6 @@ function OrderCard(props: CheckOutCardProps): JSX.Element {
         />
       </div>
     );
-  } else {
   }
 
   return (
@@ -29,7 +28,7 @@ function OrderCard(props: CheckOutCardProps): JSX.Element {
             alt={title}
           />
         </figure>
-        <p className="text-sm font-light ">{title}</p>
+        <p className="text-sm font-light overflow-hidden ">{title}</p>
       </div>
       <div className="flex flex-col justify-end items-end">
         {renderXMarkIcon}

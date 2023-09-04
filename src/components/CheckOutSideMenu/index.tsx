@@ -18,17 +18,17 @@ function CheckOutSideMenu(): JSX.Element {
     context.setShoppingCartProductsAdded(filteredProducts);
   };
 
-  // const handleCheckout = () => {
-  //   const orderToAdd = {
-  //     date: "2021-10-10",
-  //     products: context.shoppingCartProductsAdded,
-  //     totalProducts: context.shoppingCartProductsAdded.length,
-  //     totalPrice: totalPrice(context.shoppingCartProductsAdded),
-  //   };
+  const handleCheckout = () => {
+    const orderToAdd = {
+      date: "2021-10-10",
+      products: context.shoppingCartProductsAdded,
+      totalProducts: context.shoppingCartProductsAdded.length,
+      totalPrice: totalPrice(context.shoppingCartProductsAdded),
+    };
 
-  //   context.setOrderCheckingout([...context.orderCheckingout, orderToAdd]);
-  //   context.setShoppingCartProductsAdded([]);
-  // };
+    context.setOrderCheckingout([...context.orderCheckingout, orderToAdd]);
+    context.setShoppingCartProductsAdded([]);
+  };
 
   return (
     <aside
@@ -69,7 +69,7 @@ function CheckOutSideMenu(): JSX.Element {
         <Link to="/my-orders/last">
           <button
             className="w-full bg-black py-3 text-white rounded-lg mt-4 mb-2"
-            // onClick={() => handleCheckout()}
+            onClick={() => handleCheckout()}
           >
             Checkout
           </button>

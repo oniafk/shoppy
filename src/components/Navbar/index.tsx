@@ -18,7 +18,7 @@ function NavBar() {
         <li>
           <NavLink
             to="/"
-            // onClick={() => context.setSearchByCategory(null)}
+            onClick={() => context.setSearchByCategory(null)}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             All
@@ -27,7 +27,7 @@ function NavBar() {
         <li>
           <NavLink
             to="/Men"
-            // onClick={() => context.setSearchByCategory("men's clothing")}
+            onClick={() => context.setSearchByCategory("men's clothing")}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Men's
@@ -36,7 +36,7 @@ function NavBar() {
         <li>
           <NavLink
             to="/women"
-            // onClick={() => context.setSearchByCategory("women's clothing")}
+            onClick={() => context.setSearchByCategory("women's clothing")}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Women's
@@ -45,7 +45,7 @@ function NavBar() {
         <li>
           <NavLink
             to="/electronics"
-            // onClick={() => context.setSearchByCategory("electronics")}
+            onClick={() => context.setSearchByCategory("electronics")}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Electronics

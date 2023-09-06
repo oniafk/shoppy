@@ -1,4 +1,5 @@
 import { CardProps } from "../Card";
+import Product from "../../interfaces/APIResponse";
 import { CheckOutOrder } from "../CheckOutOrder";
 
 interface ContextProps {
@@ -24,6 +25,14 @@ interface ContextProps {
   orderCheckingout: CheckOutOrder[] | [];
   setOrderCheckingout: React.Dispatch<React.SetStateAction<CheckOutOrder[]>>;
   checkOutOrder: CheckOutOrder;
+  items: Product[];
+  setItems: React.Dispatch<React.SetStateAction<Product[]>>;
+  searchByTitle: string | null;
+  setSearchByTitle: React.Dispatch<React.SetStateAction<string | null>>;
+  filteredItems: Product[];
+  setFilteredItems: React.Dispatch<React.SetStateAction<Product[]>>;
+  searchByCategory: string | null;
+  setSearchByCategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export type { ContextProps };

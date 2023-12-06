@@ -64,7 +64,7 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
     searchByTitle: string | null
   ): Product[] => {
     return items?.filter((item) =>
-      item.title.toLowerCase().includes(searchByTitle.toLowerCase())
+      item.title.toLowerCase().includes(searchByTitle?.toLowerCase() ?? "")
     );
   };
 
@@ -73,7 +73,9 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
     searchByCategory: string | null
   ): Product[] => {
     return items?.filter((item) =>
-      item.category.toLowerCase().includes(searchByCategory.toLowerCase())
+      item.category
+        .toLowerCase()
+        .includes(searchByCategory?.toLowerCase() ?? "")
     );
   };
 
@@ -92,7 +94,7 @@ const ShoppingCartProvider = ({ children }: { children: ReactNode }) => {
 
     if (searchType === "title_and_category") {
       return filteredItemsByCategory(items, searchByCategory).filter((item) =>
-        item.title.toLowerCase().includes(searchByTitle.toLowerCase())
+        item.title.toLowerCase().includes(searchByTitle?.toLowerCase() ?? "")
       );
     }
 

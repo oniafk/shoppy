@@ -1,52 +1,48 @@
-# E-Commerce Website con React, TypeScript y Vite
+# E-Commerce Website with React, TypeScript, and Vite
 
-Bienvenido al repositorio del proyecto de nuestro sitio web de e-commerce construido utilizando React, TypeScript y Vite. En este proyecto, hemos creado una plataforma de comercio electrónico que permite a los usuarios explorar una variedad de productos, agregarlos al carrito de compras y realizar pedidos.
+Welcome to the repository of our e-commerce website project built using React, TypeScript, and Vite. In this project, we have created an e-commerce platform that allows users to explore a variety of products, add them to the shopping cart, and place orders.
 
-## Características
+## Features
 
-- Interfaz de usuario intuitiva y atractiva para una experiencia de compra agradable.
-- Integración de tecnologías modernas como React, TypeScript y Vite para un desarrollo eficiente y mantenible.
-- Funcionalidad completa de carrito de compras que permite a los usuarios agregar, eliminar y actualizar productos.
-- Página de detalles de productos que muestra información detallada sobre cada artículo.
-- Proceso de pago simulado para demostrar el flujo de compra.
-- Diseño receptivo para garantizar una experiencia coherente en dispositivos de diferentes tamaños.
+- Intuitive and visually appealing user interface for a pleasant shopping experience.
+- Integration of modern technologies such as React, TypeScript, and Vite for efficient and maintainable development.
+- Full shopping cart functionality that enables users to add, remove, and update products.
+- Product detail page displaying detailed information about each item.
+- Simulated payment process to demonstrate the purchase flow.
+- Responsive design to ensure a consistent experience on devices of different sizes.
 
-## Capturas de Pantalla
+## Installation Requirements
 
-_Inserta aquí algunas capturas de pantalla del sitio web para mostrar cómo luce._
+Make sure you have [Node.js](https://nodejs.org) installed on your system.
 
-## Requisitos de Instalación
+1. Clone this repository: `git clone https://github.com/your-username/your-repository.git`
+2. Navigate to the project directory: `cd your-repository`
+3. Install dependencies: `npm install`
 
-Asegúrate de tener [Node.js](https://nodejs.org) instalado en tu sistema.
+## How to Use
 
-1. Clona este repositorio: `git clone https://github.com/tu-usuario/tu-repositorio.git`
-2. Ve al directorio del proyecto: `cd tu-repositorio`
-3. Instala las dependencias: `npm install`
+1. Start the development server: `npm run dev`
+2. Open your browser and visit `http://localhost:3000` to see the site in action.
+3. Explore the platform, add products to your cart, and place simulated orders.
 
-## Cómo Usar
-
-1. Inicia el servidor de desarrollo: `npm run dev`
-2. Abre tu navegador y visita `http://localhost:3000` para ver el sitio en acción.
-3. Explora la plataforma, agrega productos a tu carrito y realiza pedidos simulados.
-
-## Tecnologías Utilizadas
+## Technologies Used
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Vite](https://vitejs.dev)
-- _Otras tecnologías que hayas utilizado en tu proyecto_
+- _Other technologies you have used in your project_
 
-## Contribución
+## Contribution
 
-¡Las contribuciones son bienvenidas! Si encuentras errores o tienes mejoras que proponer, siéntete libre de abrir un [issue](https://github.com/tu-usuario/tu-repositorio/issues) o enviar un [pull request](https://github.com/tu-usuario/tu-repositorio/pulls).
+Contributions are welcome! If you find bugs or have enhancements to propose, feel free to open an [issue](https://github.com/your-username/your-repository/issues) or submit a [pull request](https://github.com/your-username/your-repository/pulls).
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia [Nombre de la Licencia](enlace a la licencia) - por ejemplo, MIT License.
+This project is under the [License Name](license-link) - for example, MIT License.
 
 ---
 
-¡Esperamos que disfrutes explorando nuestro proyecto de e-commerce construido con React, TypeScript y Vite! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros.
+We hope you enjoy exploring our e-commerce project built with React, TypeScript, and Vite! If you have any questions or suggestions, feel free to contact us.
 
-Manuel Arias
-manufelipearias@gmail.com
+**Manuel Arias**  
+[manufelipearias@gmail.com](mailto:manufelipearias@gmail.com)

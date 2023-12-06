@@ -14,7 +14,10 @@ function MyOrder() {
   let index: number | string = currentPath.substring(
     currentPath.lastIndexOf("/") + 1
   );
-  if (index == "last") index = context.orderCheckingout?.length - 1;
+
+  if (context.orderCheckingout) {
+    if (index === "last") index = context.orderCheckingout.length - 1;
+  }
 
   return (
     <LayOut>
@@ -26,7 +29,7 @@ function MyOrder() {
       </div>
       <div className="flex flex-col w-80">
         {context.orderCheckingout?.length ? (
-          context.orderCheckingout[Number(index)].products.map(
+          context.orderCheckingout[Number(index)]?.products?.map(
             (product: CheckOutCardProps) => (
               <OrderCard
                 key={product.id}
@@ -39,7 +42,7 @@ function MyOrder() {
           )
         ) : (
           <p className="text-lg mx-auto mt-10">
-            you have not placed any order 😥
+            You have not placed any order 😥
           </p>
         )}
       </div>
